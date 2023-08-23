@@ -6,7 +6,7 @@ SF homework
 ## Проекты
 
 * [Проект 0. Игра: Угадай число](https://github.com/Nadezhda1202/sf_data_science/tree/main/project_0)
-* [Проект 1. ______](___)
+* [Проект 1. Финальное задание PYTHON-8](https://github.com/Nadezhda1202/sf_data_science/tree/master/project_1)
 * [Проект 2. ______](___)
 
 ## Ссылки на резюме
