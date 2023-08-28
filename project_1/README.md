@@ -39,7 +39,55 @@ Returns:
 
 
 ### Этапы работы над проектом  
-bit import learnbit.apps/my-app-type
+import { execFile } from 'child_process';
+import { mkdirSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import type {
+  Application,
+  AppBuildContext,
+  AppBuildResult,
+} from '@teambit/application';
+import type { MyAppTypeOptions } from './my-app-type.app-type';
+
+export class MyApp implements Application {
+  /** properties set by the app (component) using this app-type */
+  constructor(
+    readonly name: MyAppTypeOptions['name'],
+    readonly entry: MyAppTypeOptions['entry'],
+    /**
+     * this app type does not implement its own deployment.
+     * to learn more see: https://bit.dev/docs/apps/app-deployment
+     *  */
+    readonly deploy?: MyAppTypeOptions['deploy']
+  ) {}
+
+  async run(): Promise<void> {
+    const child = execFile('node', [this.entry], (error) => {
+      if (error) {
+        throw error;
+      }
+    });
+  }
+
+  async build(context: AppBuildContext): Promise<AppBuildResult> {
+    const appCapsulePath = context.capsule.path;
+    const appArtifactsDir = join(appCapsulePath, 'artifacts-to-be-deployed');
+    mkdirSync(appArtifactsDir);
+    writeFileSync(join(appArtifactsDir, 'dummy-artifact.js'), '');
+    return {
+      artifacts: [
+        {
+          name: 'my-build-artifacts',
+          /**
+           * the glob pattern to select this app's generated artifacts.
+           * these will be available for the app's deploy function.
+           * */
+          globPatterns: ['artifacts-to-be-deployed/**'],
+        },
+      ],
+    };
+  }
+}
 
 :arrow_up:[к оглавлению](.README.md#Оглавление)
 
