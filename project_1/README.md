@@ -39,7 +39,7 @@ Returns:
 
 
 ### Этапы работы над проектом  
-bit new analytics my-analytics --aspect teambit.community/starters/analytics
+bit import learnbit.apps/my-app-type
 
 :arrow_up:[к оглавлению](.README.md#Оглавление)
 
