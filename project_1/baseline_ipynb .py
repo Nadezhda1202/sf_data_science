@@ -91,7 +91,7 @@ def score_game(random_predict) -> int:
         int: среднее количество попыток
     """
     count_ls = []
-    #np.random.seed(1)  # фиксируем сид для воспроизводимости
+    np.random.seed(1)  # фиксируем сид для воспроизводимости
     random_array = np.random.randint(1, 101, size=(10000))  # загадали список чисел
 
     for number in random_array:
@@ -128,54 +128,22 @@ def game_core_v3(number: int = 1) -> int:
         int: Число попыток
     """
     # Ваш код начинается здесь
-    def counter(predict, number, count): # Отправляем наиболее близкое к number значение predict на последний этап поиска в функцию
-        while number != predict:
-          count += 1 #увеличиваем число попыток на 1
-          if number > predict: #проверяем, осталось ли число больше загаданного
-            predict += 1 
-          elif number < predict: #проверяем, осталось ли число меньше загаданного
-            predict -= 1
-        return count, predict
-
     count = 0
-    predict = np.random.randint(1, 101)
-
-    while number != predict:
+    a = list(range(1, 101))
+    a.sort()
+    mid = len(a) // 2
+    low = 0
+    high = len(a) - 1
+            
+    while a[mid] != number and low <= high:
         count += 1
-        if number >= 50: # сокращаем диапазон поиска вдвое
-          if number >= 75: # сокращаем ещё в 2 раза
-              if number >= 90: # стараемся выбрать наиболее близкое десятичное число (диапазон от 90 до 100)
-                predict = 90
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-              if number < 90: # стараемся выбрать наиболее близкое десятичное число (диапазон от 76 до 89)
-                predict = 76
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-          elif number <= 75: # сокращаем ещё в 2 раза
-              if number >= 60: # стараемся выбрать наиболее близкое десятичное число (диапазон от 60 до 75)
-                predict = 60
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-              if number < 60: # стараемся выбрать наиболее близкое десятичное число (диапазон от 51 до 59)
-                predict = 51
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-        elif number < 50: # сокращаем диапазон поиска вдвое
-          if number >= 25: # сокращаем ещё в 2 раза
-              if number >= 40: # стараемся выбрать наиболее близкое десятичное число (диапазон от 40 до 50)
-                predict = 40
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-              if number < 40: # стараемся выбрать наиболее близкое десятичное число (диапазон от 26 до 39)
-                predict = 26
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-          elif number <= 25: # сокращаем ещё в 2 раза
-              if number >= 15: # стараемся выбрать наиболее близкое десятичное число (диапазон от 15 до 25)
-                predict = 15
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-              if number < 15: # стараемся выбрать наиболее близкое десятичное число (диапазон от 1 до 14)
-                predict = 1
-                count, predict = counter(predict, number, count) # возвращаем количество попыток и наиболее близкое к number значение predict на последний этап поиска в функцию
-    # Ваш код заканчивается здесь
+        if number > a[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+        mid = (low + high) // 2   
 
     return count
-
 """Оценим качество вашего алгоритма:"""
 
 print('Run benchmarking for game_core_v3: ', end='')
