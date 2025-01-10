@@ -6,7 +6,7 @@ SF homework
 ## Проекты
 
 * [Проект 0. Игра: Угадай число](https://github.com/Nadezhda1202/sf_data_science/tree/main/project_0)
-* [Проект 1. Анализ резюме на HeadHunter](https://github.com/Nadezhda1202/sf_data_science/tree/main/Project-1)
+* [Проект 1. Анализ резюме на HeadHunter](https://drive.google.com/drive/u/0/folders/1JbpmCQAhAck4kQadaMeQfjN240qeRRYV)
 * [Проект 2. ______](___)
 
 ## Ссылки на резюме
