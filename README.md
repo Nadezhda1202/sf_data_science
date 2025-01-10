@@ -11,4 +11,4 @@ SF homework
 
 ## Ссылки на резюме
 
-https://hh.ru/resume/b4173b15ff0b6e34330039ed1f6d617a4d514c
+[https://hh.ru/resume/828cabb1ff0c6074540039ed1f6d33317a314a]
