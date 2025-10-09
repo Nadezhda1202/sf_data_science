@@ -1,116 +1,79 @@
-# Проект 2. Анализ вакансий из HeadHunter
+# Project 2. HeadHunter Job Analysis Goals
 
-### Цели
+The goal of the project is to create a tool that helps users and analysts study the labor market based on parameters such as in-demand skills, work experience, salary expectations, and the geography of job openings.
 
-Целью проекта является создать инструмент, который помогает пользователям и аналитикам изучать рынок труда по таким параметрам, как востребованные навыки, опыт работы, зарплатные ожидания и география вакансий.
+### Tasks
 
-### Задачи
+- Analyze the structure of the labor market
+  - Assess the ratio of job vacancies to employers (identify if there is a concentration of vacancies with certain employers)
+  - Explore regional coverage and industries served by employers
 
-1. Анализ структуры рынка труда
+- Analyze the geography of job openings
+  - Identify major megacities and economically developed cities by the number of vacancies
+  - Evaluate how geography affects the distribution of jobs
 
-- Оценить соотношение числа вакансий и работодателей (выявить концентрацию вакансий у одних работодателей).
+- Analyze salary expectations
+  - Study how transparent the labor market is, based on salary data
+  - Compare average salaries with data from the largest cities in Russia
 
-- Исследовать покрытие регионов и сфер деятельности работодателями.
+- Analyze work conditions
+  - Investigate preferences for working hours (full-time, part-time)
+  - Analyze vacancy profiles based on the experience level of professionals
 
-2. Анализ географии вакансий
+- Study employer activity
+  - Find leading companies by the number of vacancies (for example, Yandex, Gazprom Neft)
+  - Analyze the scale of activity of employers across regions
 
-- Выявить ключевые мегаполисы и экономически развитые города по количеству вакансий.
+- Data quality and completeness
+  - Evaluate how fully employers fill out their industry categories
+  - Identify multinational companies with a wide range of vacancies
 
-- Оценить влияние географии на распределение рабочих мест.
+- Analyze the IT and Data Science markets
+  - Assess demand for IT specialists and Data Science professionals
+  - Analyze skill requirements (Python, SQL, etc.)
+  - Understand entry levels for positions (beginners vs experienced specialists)
+  - Compare average salaries in IT/Data Science with overall market salaries
 
-3. Анализ зарплатных ожиданий
+### Summary of work stages
 
-- Изучить степень прозрачности рынка труда по наличию данных о зарплате.
+1. Data collection
+   - Downloading job vacancies and employer data from platforms like HeadHunter
+   - Gathering information on regions, industries, salaries, and requirements
 
-- Сопоставить средние зарплаты с данными по крупнейшим городам России.
+2. Data preprocessing
+   - Cleaning data from missing values and errors
+   - Standardizing salary ranges and skill descriptions
+   - Creating useful aggregated tables and dashboards
 
-4. Анализ условий работы
+3. Data analysis
+   - Generating statistical summaries of vacancies, employers, regions, and experience levels
+   - Analyzing salary distributions and work conditions
+   - Finding patterns and identifying leading companies and regions
 
-- Исследовать предпочтения по рабочему времени (полный рабочий день, частичная занятость).
+4. Visualization and reporting
+   - Building charts and dashboards for key metrics
+   - Presenting information in a user-friendly format for users and managers
 
-- Анализировать профиль вакансий по опыту специалистов.
+### Tools used
 
-5. Исследование активности работодателей
-
-- Выявить лидеров по количеству вакансий (например, «Яндекс», «Газпром нефть»).
-
-- Проанализировать масштабы деятельности работодателей по региональному покрытию.
-
-6. Качество и полнота данных
-
-- Оценить полноту заполнения сферы деятельности работодателей.
-
-- Выявить мультиотраслевые компании с широким спектром вакансий.
-
-7. Анализ рынка IT, Data Science
-
-- Оценить спрос на IT-специалистов и специалистов по Data Science.
-
-- Проанализировать требования к навыкам (Python, SQL и др.).
-
-- Исследовать уровень входа на позиции (начинающие vs опытные специалисты).
-
-- Сопоставить средние зарплаты в IT/Data Science и на рынке в целом.
-
-### Краткий обзор этапов работы
-
-1. Сбор данных
-
-- Выгрузка вакансий и работодателей с площадок типа HeadHunter.
-
-- Сбор информации о регионах, сферах деятельности, зарплатах и требованиях.
-
-2. Предобработка данных
-
-- Очистка данных от пропусков и ошибок.
-
-- Стандартизация форматов зарплатных вилок и навыков.
-
-- Создание удобных агрегированных таблиц и витрин данных.
-
-3. Анализ данных
-
-- Статистические сводки по числу вакансий, работодателей, регионам и опыту.
-
-- Анализ распределения зарплат и условий работы.
-
-- Поиск закономерностей и выявление лидирующих компаний и регионов.
-
-4. Визуализация и отчётность
-
-- Построение графиков и дашбордов по ключевым метрикам.
-
-- Представление информации в удобном виде для пользователей и менеджеров.
-
-
-### Использованные инструменты
-
-- Python и библиотеки:
-  - pandas для обработки и анализа данных,
-  - matplotlib и seaborn для визуализации данных.
+- Python with libraries:
+  - pandas for data processing and analysis
+  - matplotlib for visualization
 
 - SQL:
-   - PostgreSQL для хранения, управления и анализа больших и сложных наборов данных в различных сферах.
+  - PostgreSQL for storing, managing, and analyzing large and complex datasets in various sectors
 
 - Jupyter Notebook:
-  - Среда для разработки и документирования кода с возможностью выполнения блоков и интерактивного анализа данных.
+  - An environment for developing and documenting code, running code blocks, and conducting interactive data analysis
 
-### Выводы
+### Conclusions
 
-После выполнения всех этапов работы и построения модели можно ожидать:
+After completing all stages and building the model, we can expect:
 
-1. Высокая концентрация вакансий у отдельных работодателей. Количество вакансий более чем вдвое превышает число работодателей, что свидетельствует о том, что многие компании активно размещают несколько вакансий одновременно.
-
-2. Присутствие крупных мультиотраслевых компаний. Некоторые работодатели охватывают множество регионов и сфер деятельности, например федеральные и международные корпорации, что подтверждается максимальным числом регионов (до 181) для одного работодателя.
-
-3. География трудового рынка сосредоточена в мегаполисах и развитых региональных центрах, что соответствует экономической активности этих территорий.
-
-4. Прозрачность рынка труда растёт благодаря большому числу вакансий с указанием зарплатных ожиданий, что помогает соискателям лучше ориентироваться при поиске работы.
-
-5. Средний уровень зарплат по рынку сопоставим с крупнейшими городами России и составляет от 70 до 100 тысяч рублей и выше, что соответствует актуальным рыночным ожиданиям.
-
-6. Сегмент IT и Data Science остаётся одним из самых востребованных с высоким уровнем конкуренции и зарплат, при этом высокий порог входа отмечается для начинающих специалистов.
-
-7. Рынок труда насыщен вакансиями для специалистов со стажем 1–6 лет, в то время как рынок для новичков и очень опытных специалистов менее развит.
-
-Эти выводы отражают ключевые особенности современного рынка труда, а также демонстрируют преобладающие тенденции и вызовы текущего периода, такие как конкуренция в IT, географическая концентрация и возросшая прозрачность зарплатных ожиданий. Они могут служить основой для рекомендаций работодателям и соискателям по стратегии развития, найму и обучению специалистов.
+- High concentration of vacancies among certain employers. The number of vacancies is more than twice the number of employers, indicating many companies post several vacancies simultaneously.
+- Presence of large, multinational companies across multiple industries. Some employers operate in many regions and sectors—up to 181 regions for one employer.
+- The geography of the labor market is concentrated in megacities and developed regional centers, reflecting high economic activity in these areas.
+- The transparency of the labor market is increasing, as many vacancies include salary expectations, helping job seekers navigate the market better.
+- The average salaries range from 70,000 to 100,000 rubles or more, aligning with market expectations in major Russian cities.
+- The IT and Data Science sectors remain highly demanded, with high competition and salaries, though entry to these fields can be challenging for beginners.
+- The job market is filled with vacancies for professionals with 1–6 years of experience, while opportunities for beginners and very experienced specialists are less developed.

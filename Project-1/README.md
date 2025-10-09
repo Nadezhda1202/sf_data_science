@@ -1,58 +1,50 @@
-# Проект 1. Анализ резюме на HeadHunter
-Графики и файлы на Google Disk [Project 1 Data Science course](https://drive.google.com/drive/u/0/folders/1JbpmCQAhAck4kQadaMeQfjN240qeRRYV)
+# Project 1: Resume Analysis on HeadHunter
+Google Drive Files and Charts [Project 1 Data Science course](https://drive.google.com/drive/u/0/folders/1JbpmCQAhAck4kQadaMeQfjN240qeRRYV)
 
-### Цели
+### Goals:
 
-Целью проекта является разработка модели, способной автоматически определять предполагаемый уровень заработной платы для соискателей, исходя из предоставленных ими данных в резюме, с учетом того, что некоторая часть резюме не содержит указания желаемой зарплаты.
+The goal of this project is to develop a model that can automatically predict the expected salary level for job seekers, based on the data they provide in their resumes. This is important because some resumes do not include the desired salary.
 
-### Задачи
+### Tasks:
 
-1. Базовый анализ структуры данных:
-   - Изучить состав и структуру датасета, чтобы понимать, какие переменные присутствуют и как они могут быть использованы для анализа.
-  
-2. Преобразование данных:
-   - Подготовить и преобразовать сырые данные для последующего анализа, включая обработку пропусков, конвертацию типов и создание новых признаков.
+- Basic data analysis:
+  - Study the dataset to understand what variables are present and how they can be used for analysis.
+- Data transformation:
+  - Prepare and change raw data for analysis, including handling missing values, converting data types, and creating new features.
+- Exploratory analysis:
+  - Investigate how different factors relate to the expected salary, finding patterns and connections.
+- Data cleaning:
+  - Remove noise and incorrect data from the dataset to improve the quality of the model.
 
-3. Разведывательный анализ:
-   - Провести эконометрическое исследование, чтобы выявить зависимости и взаимосвязи между указанными характеристиками соискателей и предполагаемым уровнем заработной платы.
+### Summary of work steps:
 
-4. Очистка данных:
-   - Удалить шум и ненужные или неточные данные из набора, чтобы повысить качество и достоверность моделирования.
+- Data import:
+  - Load the dataset from the file from hh.ru website.
+- Initial analysis:
+  - Get basic information about the dataset: number of rows and columns, data types, and statistics.
+- Data visualization:
+  - Create graphs and charts to understand data distribution, find outliers, and analyze relationships.
+- Data cleaning and transformation:
+  - Handle missing data (fill or remove), convert categorical variables into numbers, and create new features based on existing ones.
+- Modeling:
+  - Build and test a model to predict salary levels using the data.
 
-### Краткий обзор этапов работы
+### Tools used:
 
-1. Импорт данных:
-   - Загрузка набора данных из файла, полученного с сайта hh.ru.
-   
-2. Первичный анализ:
-   - Вывод общих сведений о датасете: количество строк и столбцов, типы данных, статистические характеристики.
-
-3. Визуализация данных:
-   - Построение графиков и диаграмм для наглядного представления распределения данных, выявления выбросов и анализа взаимосвязей.
-
-4. Очистка и трансформация данных:
-   - Обработка пропущенных значений, их замена или удаление; преобразование категориальных переменных в численные; создание новых признаков на основе существующих.
-
-5. Моделирование:
-   - Разработка и тестирование модели для предсказания уровня заработной платы на основе имеющихся данных.
-
-### Использованные инструменты
-
-- Python и библиотеки:
-  - pandas для обработки и анализа данных,
-  - numpy для численных вычислений,
-  - matplotlib и seaborn для визуализации данных,
-  - scikit-learn для построения модели предсказания.
-
+- Python and libraries:
+  - pandas for data processing and analysis,
+  - numpy for numerical calculations,
+  - matplotlib and seaborn for making charts,
+  - scikit-learn for building the prediction model.
 - Jupyter Notebook:
-  - Среда для разработки и документирования кода с возможностью выполнения блоков и интерактивного анализа данных.
+  - An environment for writing and testing code, with options for interactive analysis.
 
-### Выводы
+### Conclusions:
 
-После выполнения всех этапов работы и построения модели можно ожидать:
+After completing all steps and creating the model, we expect to:
 
-1. Получение четкого понимания структуры данных в резюме соискателей и как они влияют на ожидаемую зарплату.
-2. Определение ключевых факторов, которые могут служить индикаторами для предсказания уровня заработной платы.
-3. Создание функциональной модели, способной генерировать разумные предположения о желаемой заработной плате для соискателей, которые не указали эту информацию в своих резюме.
+- Gain a clear understanding of the data structure in job seekers’ resumes and how it influences expected salary.
+- Identify key factors that can help predict salary levels.
+- Develop a working model capable of making reasonable guesses about the desired salary for job seekers who did not specify it in their resumes.
 
-Проект позволит компании HeadHunter более эффективно анализировать рынок труда и предоставлять данные для соискателей, о которых они могут не подозревать, повышая таким образом успех своих пользователей в поиске работы.
+This project will help HeadHunter analyze the labor market more effectively and provide useful data to job seekers, helping them improve their chances of finding suitable jobs.
